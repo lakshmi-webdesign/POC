@@ -1,0 +1,94 @@
+{
+    "user": [
+      {
+        "firstName": "abc",
+        "email": "abc@test.com",
+        "mobile": "4445678954",
+        "password": "123456",
+        "confirmpassword": "123456",
+        "termsandconditions": "on",
+        "id": 1
+      },
+      {
+        "firstName": "lakshmi",
+        "email": "lakshmi@test.com",
+        "mobile": "7896541230",
+        "password": "145632",
+        "confirmpassword": "145632",
+        "termsandconditions": "",
+        "id": 2
+      },
+      {
+        "firstName": "lakshmi",
+        "email": "lakshmi.surya18@gmail.com",
+        "mobile": "4567893210",
+        "password": "74123",
+        "confirmpassword": "74123",
+        "termsandconditions": "on",
+        "id": 3
+      },
+      {
+        "firstName": "fhfg",
+        "email": "ggbnv@test.com",
+        "mobile": "9874125630",
+        "password": "456",
+        "confirmpassword": "456",
+        "termsandconditions": "",
+        "id": 4
+      },
+      {
+        "firstName": "ghgh",
+        "email": "vghvbnvss@test.com",
+        "mobile": "7777777777",
+        "password": "55555",
+        "confirmpassword": "55555",
+        "termsandconditions": "",
+        "id": 5
+      },
+      {
+        "firstName": "qwerty",
+        "email": "qwerty@gmail.com",
+        "mobile": "5244444444",
+        "password": "4444",
+        "confirmpassword": "444",
+        "termsandconditions": "on",
+        "id": 6
+      },
+      {
+        "firstName": "jaya",
+        "email": "jaya@gmail.com",
+        "mobile": "85258525852",
+        "password": "789",
+        "confirmpassword": "789",
+        "termsandconditions": "on",
+        "id": 7
+      },
+      {
+        "firstName": "qazwsx",
+        "email": "qazwsx@test.com",
+        "mobile": "7536894210",
+        "password": "456321",
+        "confirmpassword": "456321",
+        "termsandconditions": "",
+        "id": 8
+      },
+      {
+        "firstName": "zara",
+        "email": "zara@test.com",
+        "mobile": "5555444488",
+        "password": "7412",
+        "confirmpassword": "7412",
+        "termsandconditions": "on",
+        "id": 9
+      },
+      {
+        "firstName": "lakshmisiyer",
+        "email": "lakshmisiyer618@gmail.com",
+        "mobile": "4444444444",
+        "password": "444",
+        "confirmpassword": "444",
+        "termsandconditions": "on",
+        "id": 10
+      }
+    ]
+  }

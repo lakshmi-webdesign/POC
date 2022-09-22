@@ -1,58 +1,60 @@
 import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import {Outlet, Link } from 'react-router-dom';
+import * as MdIcons from 'react-icons/md';
+import { Outlet, Link } from 'react-router-dom';
 import { SidebarData } from './Sidebar';
-import './Header.css';
+import '../style/Header.css';
 import { IconContext } from 'react-icons';
-import { Nav,Button,Navbar,Form,FormControl,NavDropdown} from 'react-bootstrap'
+
+import { Nav, Button, Navbar, Form, FormControl } from 'react-bootstrap'
 
 import "react-bootstrap/dist/react-bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Header() {
   const [sidebar, setSidebar] = useState(false);
-
   const showSidebar = () => setSidebar(!sidebar);
+
+  //const [isloggedin, setLoginstate] = useState(true);
+  //const loggedinorout = () => setLoginstate(!isloggedin);
 
   return (
     <>
-    <Navbar expand="md" className="scrolled " style={{backgroundColor:'lawngreen'}}>
-    <Navbar.Brand href="/" style={{marginLeft: '20px',marginRight: '30px'}}>
-       <img alt="Logo" />
-    </Navbar.Brand>
-    
-    <div class="d-flex search" style={{width: '-webkit-fill-available'}}>
-    <Form className="d-flex " style={{width: '95.666667%',margin: 'auto'}}>  
-    <button class="input-group-text" id="basic-addon1">⌕</button>
-    <FormControl type="search" placeholder="Search for Products" className="mr-sm-2" aria-label="Search"></FormControl>  
-    </Form>
-    </div>
+      <Navbar expand="md" className="scrolled shadow p-2 mb-1 bg-white rounded" >
+        <Navbar.Brand href="/" style={{ marginLeft: '20px', color: '#1a2553', fontWeight: '900' }}>
+          <MdIcons.MdDashboard style={{width:"30px",height:"30px",verticalAlign:"bottom"}}/>
+          HBOS Bank
+        </Navbar.Brand>
 
-    <Nav className="account ms-auto" id="account">
-           <NavDropdown title='Account' id='basic-nav-dropdown'>
-     <NavDropdown.Item >My Account</NavDropdown.Item>
-     <NavDropdown.Item >My Orders</NavDropdown.Item>
-     <NavDropdown.Item >Saved Address</NavDropdown.Item>
-     <NavDropdown.Item >My Wallet</NavDropdown.Item>
-     <NavDropdown.Item >FAQ's</NavDropdown.Item>
-     <NavDropdown.Item >Log Out</NavDropdown.Item>
-   </NavDropdown>
-  
- <Button variant="cart outline-success">MyCart</Button>
-         </Nav>
-      <IconContext.Provider value={{ color: '#fff' }}>
-        <div className='navbar' style={{marginLeft: '30px'}}>
-          <Link to='#' className='menu-bars' >
-            <FaIcons.FaUser onClick={showSidebar} />
-          </Link>
+        <div className="d-flex search" style={{ width: '-webkit-fill-available', marginRight: '15px' }}>
+          <Form className="d-flex " style={{ width: '95.666667%', margin: 'auto' }}>
+          <button className="input-group-text" id="basic-addon1" style={{ fontWeight: 'bold' }}>⌕</button>
+            <FormControl type="search" placeholder="Search for Products and Services" className="mr-sm-2" aria-label="Search"></FormControl>
+           
+          </Form>
         </div>
+
+        <Nav className="account ms-auto" id="account" >
+          <Button variant="cart outline-success" style={{ backgroundColor: '#1a2553', color: 'white' }}>Login</Button>
+        </Nav>
+
+        <IconContext.Provider value={{ color: '#fff' }}>
+          <div className='navbar' style={{ marginLeft: '20px', flex: 'none', marginRight: '10px' }}>
+          {/* <div className="navbar-brand name " id="name">Sign In</div> */}
+            <Link to='#' className='menu-bars ' onClick={showSidebar} >
+              <FaIcons.FaBars style={{ color: 'black', marginRight: '10px' ,height:"30px"}} />
+            </Link>
+          </div>
         </IconContext.Provider>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items' onClick={showSidebar}>
+
+        
+
+        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'} style={{ overflowX: 'hidden' ,zIndex: '2'}}>
+          <ul className='nav-menu-items' onClick={showSidebar} style={{ paddingLeft: '0rem' }}>
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose style={{color:'white'}}/>
+                <AiIcons.AiOutlineClose style={{ color: 'black' }} />
               </Link>
             </li>
             {SidebarData.map((item, index) => {
@@ -68,53 +70,11 @@ function Header() {
             })}
           </ul>
         </nav>
-     
+
       </Navbar>
+    
     </>
   )
 }
 
 export default Header
-// import React from 'react'
-// import { Navbar, Nav, Container , NavDropdown ,Form,FormControl ,Button} from "react-bootstrap";
-
-// function Header() {
-//   return (
-//     <Navbar expand="md" className="scrolled" style={{backgroundColor:'lawngreen'}}>
-//     <Container>
-//       <Navbar.Brand href="/">
-//         <img alt="Logo" />
-//       </Navbar.Brand>
-      
-//       <div class="d-flex" style={{width: '-webkit-fill-available'}}>
-//       <Form className="col d-flex " >  
-//           <FormControl type="search" placeholder="Search" className="mr-sm-2" aria-label="Search" />  
-//           </Form>
-
-
-//       <Navbar.Collapse id="basic-navbar-nav" style={{flexGrow: "0"}}>
-//           <Nav className="ms-auto">
-//           <NavDropdown title='Account' id='basic-nav-dropdown'>
-//     <NavDropdown.Item >My Account</NavDropdown.Item>
-//     <NavDropdown.Item >My Orders</NavDropdown.Item>
-//     <NavDropdown.Item >Saved Address</NavDropdown.Item>
-//     <NavDropdown.Item >My Wallet</NavDropdown.Item>
-//     <NavDropdown.Item >FAQ's</NavDropdown.Item>
-//     <NavDropdown.Item >Log Out</NavDropdown.Item>
-//   </NavDropdown>
-  
-// <Button variant="outline-success">MyCart</Button>
-//         </Nav>
-//       </Navbar.Collapse>
-
-//       <Navbar.Toggle aria-controls="basic-navbar-nav">
-//         <span className="navbar-toggler-icon"></span>
-//       </Navbar.Toggle>
-//       </div>
-     
-//     </Container>
-//   </Navbar>
-//   )
-// }
-
-// export default Header
