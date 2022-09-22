@@ -5,7 +5,7 @@ import * as AiIcons from 'react-icons/ai';
 import * as IoIcons5 from 'react-icons/io5';
 import * as MdIcons from 'react-icons/md';
 import * as BiIcons from 'react-icons/bi';
-import * as RiIcons from 'react-icons/ri';
+//import * as RiIcons from 'react-icons/ri';
 //import Header from './Header';
 
 

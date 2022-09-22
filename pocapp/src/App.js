@@ -10,16 +10,15 @@ import Home from './component/Home';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Login from './component/Login';
-import Register from './component/Register';
-import BalanceEnquiry from './component/BalanceEnquiry';
+import Registration from './component/Registration';
 
-import Registration1 from './component/Registration1';
+import BalanceEnquiry from './component/BalanceEnquiry';
 
 import FundTransfer from './component/FundTransfer';
 import Ministatement from './component/Ministatement';
 import Customizedstatement from './component/Customizedstatement';
 import Forgotpassword from './component/Forgotpassword';
-import Manager from './component/Manager';
+
 import Admin from './component/Admin';
 import ManagerHeader from './component/ManagerHeader';
 
@@ -48,8 +47,7 @@ function App() {
           <Route path='/' exact index element={<Home />} />
           <Route path='/balanceenquiry' element={<BalanceEnquiry />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/registration1' exact element={<Registration1 />} />
+          <Route path='/registration' exact element={<Registration />} />
           
           <Route path="/fundtransfer" element={<FundTransfer />} />
           <Route path="/ministatement" element={<Ministatement />} />

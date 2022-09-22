@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {useNavigate} from 'react-router-dom';
-const Registration1 = () => {
+const Registration = () => {
 
     const firstNameref = useRef(null);
     const emailref = useRef(null);
@@ -82,7 +82,7 @@ const Registration1 = () => {
                 <div style={{ textAlign: 'initial' }}>
                     <Form.Label >
                         <h2>Sign Up</h2>
-                        <h6 style={{ textAlign: 'initial', marginTop: '40px' }}></h6>
+                        {/* <h6 style={{ textAlign: 'initial', marginTop: '40px' }}></h6> */}
                     </Form.Label>
 
                     <Form.Group className="mb-3 " controlId="formBasicEmail">
@@ -199,4 +199,4 @@ const Registration1 = () => {
     );
 };
 
-export default Registration1;
+export default Registration;
