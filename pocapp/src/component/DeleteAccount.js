@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect} from 'react';
 
-function DeleteAccount() {
+function DeleteAccount(props) {
+  useEffect(() => {
+    props.setshow(false);
+  });
   return (
     <div>Delete Account</div>
   )

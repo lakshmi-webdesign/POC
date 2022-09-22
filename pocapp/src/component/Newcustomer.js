@@ -1,6 +1,10 @@
-import React from 'react'
 
-function Newcustomer() {
+import React, { useEffect} from 'react';
+
+function Newcustomer(props) {
+  useEffect(() => {
+    props.setshow(false);
+  });
   return (
     <div>Newcustomer</div>
   )

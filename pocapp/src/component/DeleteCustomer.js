@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect} from 'react';
 
-function DeleteCustomer() {
+function DeleteCustomer(props) {
+  useEffect(() => {
+    props.setshow(false);
+  });
   return (
     <div>Delete Customer</div>
   )

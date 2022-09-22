@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect} from 'react';
 
-function EditAccount() {
+function EditAccount(props) {
+  useEffect(() => {
+    props.setshow(false);
+  });
   return (
     <div>Edit Account</div>
   )

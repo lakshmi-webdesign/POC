@@ -97,7 +97,7 @@ export const SidebarData = [
     ,
     {
         title: 'Admin',
-        path: '/manager/admin',
+        path: '/manager',
         icon: <IoIcons5.IoLogInSharp />,
         cName: 'nav-text'
     }

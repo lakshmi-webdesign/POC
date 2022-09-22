@@ -22,6 +22,10 @@ import Forgotpassword from './component/Forgotpassword';
 import Manager from './component/Manager';
 import Admin from './component/Admin';
 import ManagerHeader from './component/ManagerHeader';
+
+import Withdrawal from './component/Withdrawal';
+import Deposit from './component/Deposit';
+
 import Newcustomer from './component/Newcustomer';
 import EditCustomer from './component/EditCustomer';
 import DeleteCustomer from './component/DeleteCustomer';
@@ -51,15 +55,18 @@ function App() {
           <Route path="/ministatement" element={<Ministatement />} />
           <Route path="/customizedstatement" element={<Customizedstatement />} />
           <Route path="/forgotpassword" element={<Forgotpassword />} />
-          <Route path="/manager" element={<Manager setshow={setshow}/>} />
-          <Route path="/manager/admin" element={<Admin setshow={setshow}/>} />
+          {/* <Route path="/manager" element={<Manager setshow={setshow}/>} /> */}
+          <Route path="/manager" element={<Admin setshow={setshow}/>} />
           <Route path="/manager/newcustomer" element={<Newcustomer setshow={setshow}/>} />
           <Route path="/manager/editcustomer" element={<EditCustomer setshow={setshow}/>} />
-
           <Route path="/manager/deletecustomer" element={<DeleteCustomer setshow={setshow}/>} />
+
           <Route path="/manager/newaccount" element={<NewAccount setshow={setshow}/>} />
           <Route path="/manager/editaccount" element={<EditAccount setshow={setshow}/>} />
           <Route path="/manager/deleteaccount" element={<DeleteAccount setshow={setshow}/>} />
+
+          <Route path="/manager/deposit" element={<Deposit setshow={setshow}/>} />
+          <Route path="/manager/withdrawal" element={<Withdrawal setshow={setshow}/>} />
 
           <Route path='/redirect' element={<Navigate to="/error-page" />} />
         </Routes>
