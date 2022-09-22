@@ -29,7 +29,7 @@ function Login() {
     async function msg() {
       // a promise
       let promise = new Promise(function (resolve, reject) {
-        const url = fetch("http://localhost:4000/user")
+        const url =fetch("http://localhost:4000/user")
           .then(res => res.json())
           .then(d =>d.find(element => ((element.email === data.email) && (element.password === data.password))))
           .then(result => resolve(JSON.stringify(result)));
@@ -118,7 +118,7 @@ function Login() {
         </Link>
         <br />
 
-        <Link to="/registration1" style={{ color: "white" }}>
+        <Link to="/registration" style={{ color: "white" }}>
           Don't have an account ? Sign up here
         </Link>
         <br /><br />

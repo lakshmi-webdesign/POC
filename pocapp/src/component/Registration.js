@@ -144,14 +144,16 @@ const Registration = () => {
                             ref={termsandconditionsref}
                             label="I accept the terms and conditions" required />
                     </Form.Group>
+                </div>
 
-                    <Button variant="primary" type="submit" style={{ width: "inherit" }}>
+                
+                <Button variant="primary" type="submit" style={{ width: "inherit" }}>
                         Submit
                     </Button>
                     <br />
                     <br />
                     <a href="/login" className='d-block' style={{ color: "white" }}>Already Signed in?</a>
-                </div>
+
             </Form>
             <Modal show={open} onHide={handleClose}>
                 <Modal.Header closeButton style={{borderBottom:"none"}}>
